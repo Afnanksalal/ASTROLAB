@@ -1,21 +1,21 @@
 <template>
-  <div class="bg-black min-h-screen relative">
+  <div class="bg-black min-h-screen relative pb-16 overflow-x-hidden"> 
     <!-- Background GIF -->
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden" style="top: -236px;">
       <img src="@/assets/images/blackhole2.gif" alt="Blackhole GIF" class="w-full h-full object-cover opacity-70 object-top">
     </div>
 
     <!-- Navbar -->
-    <nav class="bg-transparent py-6 px-8 flex justify-between items-center relative z-10">
+    <nav class="bg-transparent py-6 px-8 flex justify-between items-center relative z-10 backdrop-blur-md border-b border-gray-600/50">
       <!-- Logo -->
       <NuxtLink to="/" class="text-3xl font-bold text-white">ASTROLABS</NuxtLink>
 
       <!-- Navbar Links -->
-      <div class="hidden md:flex space-x-6">
-        <NuxtLink to="/" class="text-white hover:text-purple-300">Home</NuxtLink>
-        <NuxtLink to="/login" class="text-white hover:text-purple-300">Login</NuxtLink>
-        <NuxtLink to="/signup" class="text-white hover:text-purple-300">Sign Up</NuxtLink>
-        <NuxtLink to="/about" class="text-white hover:text-purple-300">About</NuxtLink>
+      <div class="hidden md:flex space-x-6 rounded-lg bg-white/10 backdrop-blur-md py-2 px-6">
+        <NuxtLink to="/" class="text-white hover:text-purple-300 font-bold">Home</NuxtLink>
+        <NuxtLink to="/login" class="text-white hover:text-purple-300 font-bold">Login</NuxtLink>
+        <NuxtLink to="/signup" class="text-white hover:text-purple-300 font-bold">Sign Up</NuxtLink>
+        <NuxtLink to="/about" class="text-white hover:text-purple-300 font-bold">About</NuxtLink>
       </div>
 
       <!-- Social Media & Try Me Button -->
@@ -36,17 +36,14 @@
           Try Me
         </NuxtLink>
       </div>
+
+      <!-- Flowing purple border with glow -->
+      <div class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-purple-600 via-purple-400 to-transparent animate-glow-flow"></div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="container mx-auto py-32 px-6 grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
-      <div class="flex items-center justify-center md:justify-end">
-        <!-- Space for your icons/images (like in your design) -->
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-          <!-- Icons go here -->
-        </div>
-      </div>
-      <div class="text-white">
+    <section class="text-[#c9b7d9] container mx-auto py-40 px-6 relative z-10">
+      <div>
         <h1 class="text-5xl font-bold mb-4">Providing the Ultimate Space Experiment Experience</h1>
         <p class="text-xl mb-8">
           Astrolabs simplifies the visualization of biological experiments performed in space. 
@@ -83,7 +80,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 px-6">
+    <footer class="bg-gray-900 text-white py-16 px-6">
       <div class="container mx-auto flex justify-between items-center">
         <p>© 2024 Astrolabs. All rights reserved.</p>
         <div class="flex space-x-4">
@@ -110,4 +107,23 @@ export default {
 
 <style scoped>
 /* Tailwind will handle the majority of the styles */
+
+@keyframes glow-flow {
+  0% {
+    transform: translateX(-100%);
+    box-shadow: 0 0 10px #c9b7d9; /* Glow color */
+  }
+  100% {
+    transform: translateX(100%);
+    box-shadow: 0 0 20px #c9b7d9; /* Glow color (slightly brighter) */
+  }
+}
+
+.animate-glow-flow {
+  animation: glow-flow 3s linear infinite;
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll caused by animations */
+}
 </style>

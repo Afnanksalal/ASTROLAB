@@ -13,8 +13,6 @@
         <!-- Navbar Links (Hidden on smaller screens) -->
         <div class="hidden md:flex space-x-6 rounded-lg bg-white/10 backdrop-blur-md py-2 px-6">
           <NuxtLink to="/" class="text-[rgb(201_183_217)] hover:text-purple-300 font-bold">Home</NuxtLink>
-          <NuxtLink to="/login" class="text-[rgb(201_183_217)] hover:text-purple-300 font-bold">Login</NuxtLink>
-          <NuxtLink to="/signup" class="text-[rgb(201_183_217)] hover:text-purple-300 font-bold">Sign Up</NuxtLink>
           <NuxtLink to="/about" class="text-[rgb(201_183_217)] hover:text-purple-300 font-bold">About</NuxtLink>
         </div>
   

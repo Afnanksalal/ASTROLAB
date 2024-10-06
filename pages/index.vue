@@ -15,8 +15,6 @@
       <!-- Navbar Links (Hidden on smaller screens) -->
       <div class="hidden md:flex space-x-6 rounded-lg bg-white/10 backdrop-blur-md py-2 px-6">
         <NuxtLink to="/" class="text-[rgb(201_183_217)] hover:text-purple-300 font-bold">Home</NuxtLink>
-        <NuxtLink to="/login" class="text-[rgb(201_183_217)] hover:text-purple-300 font-bold">Login</NuxtLink>
-        <NuxtLink to="/signup" class="text-[rgb(201_183_217)] hover:text-purple-300 font-bold">Sign Up</NuxtLink>
         <NuxtLink to="about" class="text-[rgb(201_183_217)] hover:text-purple-300 font-bold">About</NuxtLink>
       </div>
 
@@ -48,7 +46,7 @@
           through interactive NASA data and uncover new insights.
         </p>
         <NuxtLink to="/dashboard"
-          class="bg-purple-600 hover:bg-purple-800 text-white font-bold py-2 px-6 rounded-lg shadow-lg">
+          class="bg-purple-600 hover:bg-purple-800 text-white font-bold py-2 px-6 rounded-lg shadow-lg hidden md:inline-block">
           Try Me
         </NuxtLink>
       </div>

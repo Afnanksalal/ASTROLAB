@@ -10,6 +10,8 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.3",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"
